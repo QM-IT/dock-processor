@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
  * @since 2024-12-26
  */
 @Data
-
 @TableName("instance_info")
 public class InstanceInfo implements Serializable {
 

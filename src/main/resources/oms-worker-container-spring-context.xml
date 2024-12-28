@@ -25,4 +25,20 @@
         <property name="maximumPoolSize" value="30"/>
         <property name="minimumIdle" value="5"/>
     </bean>
+    <!--spring email-->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="domain"/>
+        <property name="protocol" value="smtp"/>
+        <property name="username" value="xxx..."/>
+        <property name="password" value="xxx..."/>
+        <property name="port" value="25"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="javaMailProperties">
+            <map>
+                <entry key="mail.ssl.enable">
+                    <value type="java.lang.Boolean">false</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
 </beans>
